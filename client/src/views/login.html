@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/index.css">
+		<link rel="stylesheet" href="../styles/login/index.css" />
+    <script src="../scripts/login/index.js" defer></script>
+		<title></title>
+	</head>
+	<body>
+		<div class="container" id="container">
+			<div class="form-container sign-in">
+				<form>
+					<p class="header">Sign in to Diprella</p>
+					<div class="social-links">
+						<a href="#"
+							><img class="icon" src="./icons/facebook.png"
+						/></a>
+						<a href="#"
+							><img class="icon" src="./icons/email.png"
+						/></a>
+						<a href="#"
+							><img class="icon" src="./icons/linkedin.png"
+						/></a>
+					</div>
+
+					<span>or use email account</span>
+
+					<div class="input-container">
+						<div>
+							<img class="input-icon" src="./icons/email.png" />
+							<input type="email" placeholder="Email" />
+						</div>
+						<div>
+							<img
+								class="input-icon"
+								src="./icons/password.png"
+							/>
+							<input type="password" placeholder="Password" />
+						</div>
+					</div>
+
+					<span class="Forget your password?"></span>
+					<button class="sign-in-button">Sign In</button>
+				</form>
+			</div>
+
+			<div class="form-container sign-up">
+				<form>
+					<p class="header">Create Account</p>
+					<div class="social-links">
+						<a href="#"
+							><img class="icon" src="./icons/facebook.png"
+						/></a>
+						<a href="#"
+							><img class="icon" src="./icons/email.png"
+						/></a>
+						<a href="#"
+							><img class="icon" src="./icons/linkedin.png"
+						/></a>
+					</div>
+
+					<span>or use email account for registration</span>
+
+					<div class="input-container">
+						<div>
+							<img class="input-icon" src="./icons/user.png" />
+							<input type="text" placeholder="User" />
+						</div>
+						<div>
+							<img class="input-icon" src="./icons/email.png" />
+							<input type="email" placeholder="Email" />
+						</div>
+						<div>
+							<img
+								class="input-icon"
+								src="./icons/password.png"
+							/>
+							<input type="password" placeholder="Password" />
+						</div>
+					</div>
+
+					<span class="Forget your password?"></span>
+					<button class="sign-up-button">Sign Up</button>
+				</form>
+			</div>
+
+			<div class="toggle-container">
+				<div class="toggle">
+					<div class="toggle-panel toggle-left">
+						<p class="header">Welcome Back!</p>
+						<span
+							>To keep connected with us please login with your
+							personal info</span
+						>
+						<button class="hidden" id="login">Sign Up</button>
+					</div>
+
+					<div class="toggle-panel toggle-right">
+						<p class="header">Hello, Friend</p>
+						<span
+							>Enter your personal details and start journey with
+							us</span
+						>
+						<button class="hidden sign-up-button" id="register">Sign Up</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>
