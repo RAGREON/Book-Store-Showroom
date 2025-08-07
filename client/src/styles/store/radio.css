@@ -1,0 +1,59 @@
+.radio-buttons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.radio-container input[type="radio"] {
+  display: none;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+
+  padding-left: 30px;
+  margin-bottom: 12px;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: rgba(231, 231, 231, 0.929);
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: var(--color-ascent);
+  border-color: var(--color-ascent);
+}
+
+.radio-container .checkmark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.radio-container input:checked ~ .checkmark::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
