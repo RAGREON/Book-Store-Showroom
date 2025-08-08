@@ -321,3 +321,14 @@
 
 	margin-top: 50px;
 }
+
+.go-story {
+	width: 20rem;
+	height: 4rem;
+	margin-top: 5rem;
+}
+
+.store-button button {
+	width: 20rem;
+	height: 4rem;
+}

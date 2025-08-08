@@ -123,8 +123,15 @@
 					part of something bigger. We're here to make reading more
 					accessible, exciting, and meaningful for everyone.
 				</p>
-				<span class="section-header" style="margin-top: 28rem"
+
+				<button class="go-story">STORY</button>
+
+				<span
+					id="story-sec"
+					class="section-header"
+					style="margin-top: 25rem"
 					>Our Story</span
+				>
 				>
 				<div class="story-section">
 					<div class="story-block" id="about-us">
@@ -206,7 +213,9 @@
 								the traditional and the modern, all under one
 								roof.
 							</span>
-							<div class="next-button" next="4"></div>
+							<div class="store-button">
+								<button>STORE</button>
+							</div>
 						</div>
 
 						<div class="story-image-wrapper">
@@ -272,5 +281,19 @@
 				</div>
 			</div>
 		</div>
+
+		<script>
+			document.querySelector(".go-story").onclick = function () {
+				document
+					.getElementById("story-sec")
+					.scrollIntoView({ behavior: "smooth" });
+			};
+
+			const storeButton = document.querySelector(".store-button button");
+
+			storeButton.onclick = () => {
+				window.location.href = "./store/store.html";
+			};
+		</script>
 	</body>
 </html>

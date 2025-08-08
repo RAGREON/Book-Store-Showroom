@@ -15,6 +15,8 @@ body {
 	align-items: start;
 
 	background-color: var(--color-background);
+
+  margin-top: 10rem;
 }
 
 .container div {
@@ -31,6 +33,19 @@ body {
 	gap: 1rem;
 }
 
+
+.side-bar-card {
+  width: 100%;
+  height: 3rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  box-sizing: border-box;
+}
+
 .store-section {
 	width: 75%;
 
@@ -38,11 +53,80 @@ body {
 	flex-direction: column;
   justify-content: start;
   gap: 2rem;
+
+	margin-bottom: 10rem;
 }
 
 .featured {
-	height: 400px;
+	height: 450px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+
+  box-sizing: border-box;
+
+  padding: 1rem;
 }
+
+.featured-left-section {
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ghost-title {
+  color: var(--color-text-secondary);
+  font-weight: bold;
+}
+
+.featured-title {
+  font-size: 3.5rem;
+  font-weight: 500;
+
+  width: 90%;
+}
+
+.featured-shop-now-btn {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+
+  border: 1px solid var(--color-primary);
+  border-radius: 1rem;
+
+  font-size: 1.25rem;
+
+  width: 20rem;
+  height: 5rem;
+
+  margin-top: 1rem;
+
+
+  transition: all 0.35s ease-in-out;
+}
+
+.featured-shop-now-btn:hover {
+  background-color: var(--color-ascent);
+  border: 1px solid var(--color-ascent);
+}
+
+.featured-right-section {
+  width: 55%;
+  height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.featured-right-section img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
+}
+
 
 .info-stuff {
 	display: flex;
