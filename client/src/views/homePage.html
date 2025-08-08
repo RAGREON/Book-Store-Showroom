@@ -305,6 +305,7 @@
 							<i class="fab fa-facebook"></i>
 							<i class="fab fa-linkedin"></i>
 							<i class="fab fa-twitter"></i>
+							<i class="fa-brands fa-github" id="github-repo"></i>
 						</div>
 					</div>
 				</div>
@@ -323,6 +324,15 @@
 			storeButton.onclick = () => {
 				window.location.href = "./store/store.html";
 			};
+
+			const githubIcon = document.getElementById("github-repo");
+
+			githubIcon.addEventListener("click", () => {
+				window.open(
+					"https://github.com/RAGREON/Book-Store-Showroom",
+					"_blank"
+				);
+			});
 		</script>
 	</body>
 </html>

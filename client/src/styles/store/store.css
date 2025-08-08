@@ -227,9 +227,9 @@ body {
 	animation-timeline: view(50% 5%);
 }
 
-.product-card.pop-in {
-	/* animation: popUpFromDown 1s ease-in-out both; */
-}
+/* .product-card.pop-in {
+	animation: popUpFromDown 1s ease-in-out both;
+} */
 
 @keyframes popUpFromDown {
 	from {

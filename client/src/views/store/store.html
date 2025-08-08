@@ -595,12 +595,10 @@
 
 				<div class="social-links">
 					<i class="fa fa-instagram" aria-hidden="true"></i>
-
 					<i class="fa fa-facebook-square" aria-hidden="true"></i>
-
 					<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-
 					<i class="fa fa-twitter-square" aria-hidden="true"></i>
+					<i class="fa-brands fa-github" id="github-repo"></i>
 				</div>
 			</div>
 		</div>
@@ -642,6 +640,15 @@
 
 			homeButton.addEventListener("click", () => {
 				window.location.href = "../homePage.html";
+			});
+
+			const githubIcon = document.getElementById("github-repo");
+
+			githubIcon.addEventListener("click", () => {
+				window.open(
+					"https://github.com/RAGREON/Book-Store-Showroom",
+					"_blank"
+				);
 			});
 		</script>
 	</body>
