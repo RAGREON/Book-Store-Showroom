@@ -1,290 +1,287 @@
-@import url('./radio.css');
+@import url("./radio.css");
 
 :root {
-  --font-product-title: 1.75rem;
-  --font-product-price: 1.5rem; 
+	--font-product-title: 1.75rem;
+	--font-product-price: 1.5rem;
 }
 
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .container {
-  background-color: var(--color-background);
+	background-color: var(--color-background);
 
-  width: 100vw;
-  min-height: 100vh;
-  padding: 0 6rem;
-  box-sizing: border-box;
+	width: 100vw;
+	min-height: 100vh;
+	padding: 0 6rem;
+	box-sizing: border-box;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
 }
 
 .divider {
-  width: 100%;
-  margin: 5rem 0;
-  background-color: var(--color-text-secondary);
+	width: 100%;
+	margin: 5rem 0;
+	background-color: var(--color-text-secondary);
 }
 
 .product-section {
-  width: 100%;
-  min-height: 700px;
-  
-  padding: 1rem 1rem;
-  box-sizing: border-box;
-  margin-bottom: 10rem;
+	width: 100%;
+	min-height: 700px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+	padding: 1rem 1rem;
+	box-sizing: border-box;
+	margin-bottom: 10rem;
 
-  position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+
+	position: relative;
 }
 
 .product-section::after {
-  content: '';
+	content: "";
 
-  position: absolute;
-  left: 0;
-  bottom: -2rem;
+	position: absolute;
+	left: 0;
+	bottom: -2rem;
 
-  width: 70%;
-  height: 1px;
+	width: 70%;
+	height: 1px;
 
-  background-color: var(--color-primary);
+	background-color: var(--color-primary);
 }
 
-
 .product-cover {
-  width: 30%;
-  height: 620px;
+	width: 30%;
+	height: 620px;
 }
 
 .cover {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }
 
 .product-description {
-  width: 35%;
-  height: 100%;
+	width: 35%;
+	height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: start;
+	gap: 1.25rem;
 }
 
 .product-title {
-  width: 90%;
+	width: 90%;
 
-  color: var(--color-text-primary);
-  font-size: var(--font-product-title);
+	color: var(--color-text-primary);
+	font-size: var(--font-product-title);
 }
 
 .rating-author {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 1.5rem;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 1.5rem;
 }
 
 .ratings {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.125rem 0;
-  gap: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.125rem 0;
+	gap: 1.5rem;
 }
 
 .author {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
 .author span a {
-  all: unset;
-  color: var(--color-text-secondary)
+	all: unset;
+	color: var(--color-text-secondary);
 }
 
 .check {
-  color: var(--color-ascent);
+	color: var(--color-ascent);
 }
 
 .uncheck {
-  color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .side-products {
-  width: 20%;
-  height: 100%;
+	width: 20%;
+	height: 100%;
 }
 
 .product-price {
-  font-size: var(--font-product-price);
+	font-size: var(--font-product-price);
 }
 
 .product-format {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.75rem;
 }
 
 .format-label {
-  font-size: 1.15rem;
-  font-weight: 500;
+	font-size: 1.15rem;
+	font-weight: 500;
 
-  color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .product-count-cart-container {
-  width: 100%;
+	width: 100%;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-  gap: 5%;
+	gap: 5%;
 }
 
 .product-count {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
 }
 
 #count::-webkit-outer-spin-button,
 #count::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 #count {
-  all: unset;
-  border: none;
-  background-color: var(--color-background);
+	all: unset;
+	border: none;
+	background-color: var(--color-background);
 
-  width: 3rem;
-  text-align: center;
+	width: 3rem;
+	text-align: center;
 }
 
 .mod-count {
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
+	color: var(--color-text-primary);
+	background-color: var(--color-background);
 
-  border: 1px solid var(--color-primary);
-  border-radius: 50%;
+	border: 1px solid var(--color-primary);
+	border-radius: 50%;
 
-  width: 2rem;
-  height: 2rem;
+	width: 2rem;
+	height: 2rem;
 
-  font-size: 18px;
+	font-size: 18px;
 
-  transition: 350ms ease-in-out;
+	transition: 350ms ease-in-out;
 }
 
 .mod-count:hover {
-  color: var(--color-background);
-  background-color: var(--color-primary);
+	color: var(--color-background);
+	background-color: var(--color-primary);
 
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
-
 .mod-count:active {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .cart-button {
-  width: 80%;
-  height: 3.5rem;
+	width: 80%;
+	height: 3.5rem;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
 
-  font-size: 1rem;
-  font-weight: 600;
+	font-size: 1rem;
+	font-weight: 600;
 
-  color: var(--color-background);
-  background-color: var(--color-ascent);
+	color: var(--color-background);
+	background-color: var(--color-ascent);
 
-  border: 1px solid var(--color-ascent);
-  border-radius: 1rem;
+	border: 1px solid var(--color-ascent);
+	border-radius: 1rem;
 
-  transition: 0.35s ease-in-out;
+	transition: 0.35s ease-in-out;
 }
 
 .cart-button:hover {
-  color: var(--color-ascent);
-  background-color: var(--color-background);
+	color: var(--color-ascent);
+	background-color: var(--color-background);
 }
 
 .icons-wrapper {
-  display: flex;
-  justify-content: start;
-  gap: 3rem;
+	display: flex;
+	justify-content: start;
+	gap: 3rem;
 
-  margin-top: 1rem;
+	margin-top: 1rem;
 }
 
 .icons-wrapper div i {
-  color: var(--color-primary);
+	color: var(--color-primary);
 }
 
 .icons-wrapper div span {
-  margin-left: 10px;
+	margin-left: 10px;
 }
 
 .side-products {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 
-  width: 25%;
+	width: 25%;
 }
 
 .book-card-record {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  gap: 2rem;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 2rem;
 
-  width: 100%;
-  height: 140px;
+	width: 100%;
+	height: 140px;
 
-  transition: 350ms ease-in-out;
+	transition: 350ms ease-in-out;
 
-  padding: 1rem;
+	padding: 1rem;
 }
 
 .book-card-record:hover {
-  background-color: #e2dddc;;
+	background-color: #e2dddc;
 }
 
 .record-cover-wrapper {
-  width: 100px;
-  height: 100%;
+	width: 100px;
+	height: 100%;
 }
 
 .record-cover {
-  width: 100%;
-  height: 100%;
- 
-  object-fit: contain; 
+	width: 100%;
+	height: 100%;
+
+	object-fit: contain;
 }
 
 .record-description {
-  height: 100%;
+	height: 100%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
-

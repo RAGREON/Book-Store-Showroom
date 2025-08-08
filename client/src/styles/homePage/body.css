@@ -131,13 +131,12 @@
 .main-section {
 	display: flex;
 	flex-direction: column;
-	/* justify-content: center; */
+	justify-content: center;
 	align-items: center;
 
 	width: calc(100% - 12rem);
 
 	position: relative;
-	top: -100px;
 }
 
 .section-header {
@@ -172,6 +171,12 @@
 .stat-header {
 	font-size: var(--font-stat-header);
   margin-bottom: 5rem;
+}
+
+.stat-paragraph {
+	width: 80%;
+	font-size: 1.5rem;
+	text-align: center;
 }
 
 .story-section {
