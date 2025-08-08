@@ -4,13 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>NoXiL</title>
-		<link
+		<!-- <link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/> -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+			integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
 		/>
+
 		<link rel="stylesheet" href="../styles/homePage/index.css" />
 		<script src="../scripts/homePage/index.js" defer></script>
-		<link rel="stylesheet" href="../styles//index.css" />
+		<link rel="stylesheet" href="../styles/index.css" />
 	</head>
 	<body>
 		<div class="container">
@@ -50,7 +59,7 @@
 
 			<div class="hero-section">
 				<div class="hero-about">
-					<h1>About Bookstore</h1>
+					<h1>About BookStore</h1>
 					<p>
 						Discover your next great read at our bookstore, a cozy
 						space filled with bestsellers, timeless classics, and
@@ -60,7 +69,17 @@
 					<div class="buttons">
 						<button id="explore-button">EXPLORE</button>
 
-						<button id="sign-in-button">SIGN IN</button>
+						<button id="sign-in-button">
+							<a
+								href="./store/store.html"
+								style="
+									text-decoration: none;
+									color: inherit;
+									cursor: pointer;
+								"
+								>STORE</a
+							>
+						</button>
 					</div>
 				</div>
 
@@ -124,7 +143,9 @@
 					accessible, exciting, and meaningful for everyone.
 				</p>
 
-				<button class="go-story">STORY</button>
+				<button class="go-story">
+					<i class="fa-solid fa-chevron-down"></i>
+				</button>
 
 				<span
 					id="story-sec"
@@ -132,7 +153,7 @@
 					style="margin-top: 25rem"
 					>Our Story</span
 				>
-				>
+
 				<div class="story-section">
 					<div class="story-block" id="about-us">
 						<div class="story-image-wrapper">
@@ -151,7 +172,9 @@
 								tapping screens, we’re here to make your reading
 								experience seamless, accessible, and joyful.
 							</span>
-							<div class="next-button" next="1"></div>
+							<div class="next-button" next="1">
+								<i class="fa-solid fa-chevron-down"></i>
+							</div>
 						</div>
 					</div>
 
@@ -166,7 +189,9 @@
 								accessible digital reads — so every reader finds
 								their perfect format.
 							</span>
-							<div class="next-button" next="2"></div>
+							<div class="next-button" next="2">
+								<i class="fa-solid fa-chevron-down"></i>
+							</div>
 						</div>
 
 						<div class="story-image-wrapper">
@@ -196,7 +221,9 @@
 								library, we’ve evolved to bring stories to your
 								shelf or your screen — your choice, your pace.
 							</span>
-							<div class="next-button" next="3"></div>
+							<div class="next-button" next="3">
+								<i class="fa-solid fa-chevron-down"></i>
+							</div>
 						</div>
 					</div>
 
@@ -213,8 +240,11 @@
 								the traditional and the modern, all under one
 								roof.
 							</span>
-							<div class="store-button">
-								<button>STORE</button>
+							<div class="last-buttons">
+								<button class="store-button">STORE</button>
+								<button class="contact-button" id="contact-btn">
+									CONTACT US
+								</button>
 							</div>
 						</div>
 
@@ -270,13 +300,12 @@
 					</p>
 
 					<div class="social-links">
-						<i class="fa fa-instagram" aria-hidden="true"></i>
-
-						<i class="fa fa-facebook-square" aria-hidden="true"></i>
-
-						<i class="fa fa-linkedin-square" aria-hidden="true"></i>
-
-						<i class="fa fa-twitter-square" aria-hidden="true"></i>
+						<div class="social-links">
+							<i class="fab fa-instagram"></i>
+							<i class="fab fa-facebook"></i>
+							<i class="fab fa-linkedin"></i>
+							<i class="fab fa-twitter"></i>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -289,7 +318,7 @@
 					.scrollIntoView({ behavior: "smooth" });
 			};
 
-			const storeButton = document.querySelector(".store-button button");
+			const storeButton = document.querySelector(".store-button");
 
 			storeButton.onclick = () => {
 				window.location.href = "./store/store.html";

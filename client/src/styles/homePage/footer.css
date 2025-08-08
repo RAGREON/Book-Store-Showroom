@@ -93,3 +93,13 @@
   color: var(--color-secondary);
   transform: scale(1);
 }
+
+.footer-about div,
+.others div {
+  cursor: pointer;
+}
+
+.footer-about div span:hover,
+.others div span:hover {
+  color: var(--color-ascent);
+}

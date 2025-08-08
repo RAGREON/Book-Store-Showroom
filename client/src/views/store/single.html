@@ -16,11 +16,12 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
 
-		<link rel="stylesheet" href="../../styles/homePage/navbar.css">
+		<link rel="stylesheet" href="../../styles/homePage/navbar.css" />
 		<title>Document</title>
 		<link rel="stylesheet" href="../../styles/index.css" />
 		<link rel="stylesheet" href="../../styles/store/single.css" />
 		<link rel="stylesheet" href="../../styles/footer.css" />
+		<link rel="stylesheet" href="../../styles/store/productNav.css" />
 	</head>
 	<body>
 		<div class="container">
@@ -65,8 +66,10 @@
 				</div>
 				<div class="product-description">
 					<span class="product-title">
-						<!-- The Lost Colony (The Long Winter Trilogy Book 3) -->
-						Kumo Desu ga, Nani ka? (Volume I)
+						<span class="title-part">
+							Kumo Desu ga, Nani ka? (Volume I)
+						</span>
+						<i class="fa-solid fa-circle-info" id="info-ref"></i>
 					</span>
 					<div class="rating-author">
 						<div class="ratings">
@@ -142,9 +145,9 @@
 
 					<div class="product-count-cart-container">
 						<div class="product-count">
-							<button class="mod-count">-</button>
+							<button class="mod-count" id="decrease">-</button>
 							<input type="number" id="count" value="0" />
-							<button class="mod-count">+</button>
+							<button class="mod-count" id="increase">+</button>
 						</div>
 
 						<button class="cart-button">Add to Cart</button>
@@ -208,6 +211,14 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="product-nav-list">
+				<ul>
+					<li>Description</li>
+					<li>Product Details</li>
+					<li>Review (1)</li>
+				</ul>
+			</div>
 		</div>
 		<div class="footer">
 			<hr class="separator" />
@@ -261,24 +272,35 @@
 			</div>
 		</div>
 		<script>
-			// const containerDivs = document.querySelectorAll(".container div");
-			// let borderVisible = false;
+			const decreaseBtn = document.getElementById("decrease");
+			const increaseBtn = document.getElementById("increase");
+			const countInput = document.getElementById("count");
+			const infoRefButton = document.getElementById("info-ref");
+			const productNavSection = document.querySelector(".product-nav-list")
 
-			// document.addEventListener("keypress", (e) => {
-			// 	if (e.key.toLowerCase() === "f") {
-			// 		borderVisible = !borderVisible;
+			decreaseBtn.addEventListener("click", () => {
+				let value = parseInt(countInput.value) || 0;
+				if (value > 0) {
+					countInput.value = value - 1;
+				}
+			});
 
-			// 		containerDivs.forEach((div) => {
-			// 			div.style.border = borderVisible
-			// 				? "1px solid black"
-			// 				: "none";
-			// 		});
-			// 	}
-			// });
+			increaseBtn.addEventListener("click", () => {
+				let value = parseInt(countInput.value) || 0;
+				countInput.value = value + 1;
+			});
 
-			document.querySelector("#home-logo").addEventListener('click', () => {
-				window.location.href = "../homePage.html"
-			})
+			document
+				.querySelector("#home-logo")
+				.addEventListener("click", () => {
+					window.location.href = "../homePage.html";
+				});
+
+				infoRefButton.addEventListener('click', () => {
+					productNavSection.scrollIntoView({
+						behavior: 'smooth'
+					})
+				})
 		</script>
 	</body>
 </html>

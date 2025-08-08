@@ -1,0 +1,11 @@
+.product-nav-list ul {
+  display: flex;
+  gap: 4rem;
+  list-style: none; /* hides bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.product-nav-list ul li {
+  padding: 0.5rem 1rem; /* add spacing inside each li */
+}

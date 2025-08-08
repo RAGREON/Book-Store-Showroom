@@ -1,0 +1,3 @@
+#!/bin/bash
+
+find . -type f -exec file --mime {} \; | grep text | cut -d: -f1 | xargs wc -l

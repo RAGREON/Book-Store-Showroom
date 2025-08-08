@@ -19,7 +19,7 @@
 		<link rel="stylesheet" href="../../styles/index.css" />
 		<link rel="stylesheet" href="../../styles/store/store.css" />
 		<link rel="stylesheet" href="../../styles/footer.css" />
-		<link rel="stylesheet" href="../../styles/homePage/navbar.css">
+		<link rel="stylesheet" href="../../styles/homePage/navbar.css" />
 	</head>
 	<body>
 		<div class="navbar center">
@@ -46,10 +46,14 @@
 				</div>
 
 				<div id="profile-button">
-					<img class="profile-photo" src="../../assets/icons/pfp.jpg" />
+					<img
+						class="profile-photo"
+						src="../../assets/icons/pfp.jpg"
+					/>
 				</div>
 			</div>
 		</div>
+		<hr class="divider" />
 		<div class="container">
 			<div class="side-bar">
 				<div class="side-bar-card">
@@ -602,6 +606,16 @@
 		</div>
 
 		<script>
+			window.addEventListener("DOMContentLoaded", () => {
+				document.querySelectorAll(".product-card").forEach((card) => {
+					card.classList.add("pop-in");
+
+					card.addEventListener("animationend", () => {
+						card.classList.remove("pop-in");
+					});
+				});
+			});
+
 			const wishlistIcons = document.querySelectorAll("#wishlist");
 
 			const buyButtons = document.querySelectorAll(".buy-btn");
@@ -624,11 +638,11 @@
 				});
 			});
 
-			const homeButton = document.querySelector('#home-logo')
+			const homeButton = document.querySelector("#home-logo");
 
-			homeButton.addEventListener('click', () => {
-				window.location.href = '../homePage.html'
-			})
+			homeButton.addEventListener("click", () => {
+				window.location.href = "../homePage.html";
+			});
 		</script>
 	</body>
 </html>

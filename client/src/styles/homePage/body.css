@@ -85,6 +85,10 @@
 	gap: 2.5rem;
 }
 
+.buttons button {
+	animation: titlePop 1s ease-in-out;
+}
+
 #explore-button {
 	width: 18rem;
 
@@ -183,10 +187,11 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 2rem;
-	gap: 15rem;
+	padding: 2.2rem;
+	gap: 15.5rem;
 
 	width: calc(100% - 12rem);
+
 }
 
 .story-block {
@@ -318,18 +323,33 @@
 	border-radius: 50%;
 
 	background-color: var(--color-ascent);
+	border: 1px solid var(--color-ascent);
 
 	margin-top: 50px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: var(--color-background);
+
+	transition: all 0.35s;
 }
 
-.go-story {
-	width: 20rem;
-	height: 4rem;
-	margin-top: 5rem;
+.next-button:hover {
+	color: var(--color-ascent);
+	background-color: var(--color-background);
+	transform: scale(1.2);
 }
 
-.store-button button,
-.go-story {
+.next-button:active {
+	transform: scale(1);
+}
+
+
+.store-button,
+.go-story,
+.contact-button {
 	width: 20rem;
 	height: 4rem;
 
@@ -343,7 +363,73 @@
 	transition: all 0.35s ease-in-out;
 }
 
-.store-button button:hover {
+.go-story {
+	width: 4rem;
+	height: 4rem;
+	margin-top: 5rem;
+	border-radius: 50%;
+}
+
+.last-buttons {
+	display: flex;
+	gap: 2rem;
+}
+
+.store-button {
+	width: 15rem;
+}
+
+.contact-button {
+	background-color: var(--color-background);
+	color: var(--color-text-secondary);
+	border: 1px solid var(--color-text-secondary);
+}
+
+.contact-button:hover {
+	background-color: var(--color-text-secondary);
+	color: var(--color-background);
+}
+
+.store-button:hover {
 	background-color: var(--color-background);
 	color: var(--color-ascent);
+}
+
+.go-up {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: var(--color-ascent);
+	width: 4rem;
+	height: 4rem;
+}
+
+.hero-about h1 {
+	animation: titlePop 1s ease-in-out;
+}
+
+.hero-about p {
+	animation: slideIn 1s ease-in-out;
+}
+
+@keyframes titlePop {
+	from {
+		transform: translate(5rem) scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: translate(0) scale(1);
+		opacity: 1;
+	}
+	
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateX(-10rem) scale(0);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0) scale(1);
+	}
 }
