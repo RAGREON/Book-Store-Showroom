@@ -1,6 +1,14 @@
 body {
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
+
+.navbar {
+	margin-left: 6rem;
+}
+
 
 .container {
 	box-sizing: border-box;
@@ -16,12 +24,12 @@ body {
 
 	background-color: var(--color-background);
 
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 
-.container div {
+/* .container div {
 	border: 1px solid black;
-}
+} */
 
 .side-bar {
 	width: 20%;

@@ -19,8 +19,37 @@
 		<link rel="stylesheet" href="../../styles/index.css" />
 		<link rel="stylesheet" href="../../styles/store/store.css" />
 		<link rel="stylesheet" href="../../styles/footer.css" />
+		<link rel="stylesheet" href="../../styles/homePage/navbar.css">
 	</head>
 	<body>
+		<div class="navbar center">
+			<div id="home-logo" class="logo-wrapper">
+				<i class="fa fa-book" aria-hidden="true"></i>
+				<span>BOOKSTORE</span>
+			</div>
+			<div class="search-bar">
+				<input
+					id="search-box"
+					placeholder="What book are you looking for?"
+				/>
+			</div>
+			<button id="discover-button">DISCOVER</button>
+			<div class="icons-section">
+				<div id="notification-button">
+					<i class="fa fa-bell-o nav-icon" aria-hidden="true"></i>
+				</div>
+				<div id="cart-button">
+					<i
+						class="fa fa-shopping-cart nav-icon"
+						aria-hidden="true"
+					></i>
+				</div>
+
+				<div id="profile-button">
+					<img class="profile-photo" src="../../assets/icons/pfp.jpg" />
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="side-bar">
 				<div class="side-bar-card">
@@ -573,24 +602,9 @@
 		</div>
 
 		<script>
-			const containerDivs = document.querySelectorAll(".container div");
-			let borderVisible = true;
-
-			document.addEventListener("keypress", (e) => {
-				if (e.key.toLowerCase() === "f") {
-					borderVisible = !borderVisible;
-
-					containerDivs.forEach((div) => {
-						div.style.border = borderVisible
-							? "1px solid black"
-							: "none";
-					});
-				}
-			});
-
 			const wishlistIcons = document.querySelectorAll("#wishlist");
 
-			const buyButtons = document.querySelectorAll(".buy-btn")
+			const buyButtons = document.querySelectorAll(".buy-btn");
 
 			wishlistIcons.forEach((wishlistIcon) => {
 				wishlistIcon.addEventListener("click", () => {
@@ -606,11 +620,15 @@
 
 			buyButtons.forEach((buybutton) => {
 				buybutton.addEventListener("click", () => {
-					window.location.href = "./single.html"
-				})
+					window.location.href = "./single.html";
+				});
+			});
+
+			const homeButton = document.querySelector('#home-logo')
+
+			homeButton.addEventListener('click', () => {
+				window.location.href = '../homePage.html'
 			})
-
-
 		</script>
 	</body>
 </html>

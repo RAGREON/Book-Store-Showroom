@@ -15,6 +15,8 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
+
+		<link rel="stylesheet" href="../../styles/homePage/navbar.css">
 		<title>Document</title>
 		<link rel="stylesheet" href="../../styles/index.css" />
 		<link rel="stylesheet" href="../../styles/store/single.css" />
@@ -22,6 +24,37 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="navbar center">
+				<div id="home-logo" class="logo-wrapper">
+					<i class="fa fa-book" aria-hidden="true"></i>
+					<span>BOOKSTORE</span>
+				</div>
+				<div class="search-bar">
+					<input
+						id="search-box"
+						placeholder="What book are you looking for?"
+					/>
+				</div>
+				<button id="discover-button">DISCOVER</button>
+				<div class="icons-section">
+					<div id="notification-button">
+						<i class="fa fa-bell-o nav-icon" aria-hidden="true"></i>
+					</div>
+					<div id="cart-button">
+						<i
+							class="fa fa-shopping-cart nav-icon"
+							aria-hidden="true"
+						></i>
+					</div>
+
+					<div id="profile-button">
+						<img
+							class="profile-photo"
+							src="../../assets/icons/pfp.jpg"
+						/>
+					</div>
+				</div>
+			</div>
 			<hr class="divider" />
 			<div class="product-section">
 				<div class="product-cover">
@@ -228,20 +261,24 @@
 			</div>
 		</div>
 		<script>
-			const containerDivs = document.querySelectorAll(".container div");
-			let borderVisible = false;
+			// const containerDivs = document.querySelectorAll(".container div");
+			// let borderVisible = false;
 
-			document.addEventListener("keypress", (e) => {
-				if (e.key.toLowerCase() === "f") {
-					borderVisible = !borderVisible;
+			// document.addEventListener("keypress", (e) => {
+			// 	if (e.key.toLowerCase() === "f") {
+			// 		borderVisible = !borderVisible;
 
-					containerDivs.forEach((div) => {
-						div.style.border = borderVisible
-							? "1px solid black"
-							: "none";
-					});
-				}
-			});
+			// 		containerDivs.forEach((div) => {
+			// 			div.style.border = borderVisible
+			// 				? "1px solid black"
+			// 				: "none";
+			// 		});
+			// 	}
+			// });
+
+			document.querySelector("#home-logo").addEventListener('click', () => {
+				window.location.href = "../homePage.html"
+			})
 		</script>
 	</body>
 </html>
